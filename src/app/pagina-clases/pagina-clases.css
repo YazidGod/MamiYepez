@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+#Titulo{
+    font-size:40px;
+    font-weight: bold;
+    color: #CC99CC;
+    font-family: 'Calistoga';
+}
+#txt-rosa{
+    color: #CC99CC;
+    font-family: 'Calistoga';
+}
+#txt-negro{
+    color: black;
+    font-family: 'Calistoga';
+}

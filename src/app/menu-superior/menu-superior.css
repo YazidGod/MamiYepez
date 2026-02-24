@@ -1,0 +1,67 @@
+#menu-superior {
+  background-color: #81c8c3;
+  padding: 1rem 0;
+  position: relative;
+}
+
+#menu-superior .bi-list {
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menu-desplegable {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #6bb3ae;
+  padding: 1rem 0;
+}
+
+.menu-desplegable ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-desplegable li {
+  padding: 0.5rem 2rem;
+}
+
+.menu-desplegable a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+}
+
+.menu-desplegable a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.perfil-desplegable {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background-color: #6bb3ae;
+  padding: 1rem;
+}
+.perfil-desplegable ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.perfil-desplegable li {
+  padding: 0.5rem 0;
+}
+.perfil-desplegable a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+}
+.perfil-desplegable a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

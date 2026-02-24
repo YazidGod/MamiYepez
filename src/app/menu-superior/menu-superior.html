@@ -1,0 +1,24 @@
+<nav id="menu-superior">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <i class="bi bi-list" (click)="menuVisible = !menuVisible"></i>
+            <button class="btn btn-outline" id="secion" (click)="perfilVisible = !perfilVisible"><i
+                    class="bi bi-person-circle"></i></button>
+        </div>
+        @if (menuVisible) {
+        <div class="menu-desplegable">
+            <ul class="menu-lista">
+                <li><a routerLink="/" (click)="menuVisible = false">Inicio</a></li>
+                <li><a routerLink="/clases" (click)="menuVisible = false">Clases</a></li>
+            </ul>
+        </div>
+        }
+        @if (perfilVisible) {
+        <div class="perfil-desplegable">
+            <ul class="perfil-lista">
+                <li><a routerLink="/perfil" (click)="perfilVisible = false">Mi perfil</a></li>
+            </ul>
+        </div>
+        }
+    </div>
+</nav>
