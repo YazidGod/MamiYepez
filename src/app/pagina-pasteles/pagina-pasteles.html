@@ -1,0 +1,235 @@
+<div id="Pasteles" class="container py-3">
+
+    <div class="text-center mb-3">
+        <h1 class="mb-0">Pasteles</h1>
+    </div>
+
+    <!-- Botonera -->
+    <div class="d-flex flex-wrap align-items-center justify-content-center text-center gap-2 mb-3">
+        <button class="btn btn-custom" [class.active]="vainillaVisible" (click)="mostrar('vainilla')">Vainilla</button>
+        <button class="btn btn-custom" [class.active]="chocolateVisible"
+            (click)="mostrar('chocolate')">Chocolate</button>
+        <button class="btn btn-custom" [class.active]="combinadoVisible"
+            (click)="mostrar('combinado')">Combinado</button>
+        <button class="btn btn-custom" [class.active]="tresLechesVisible" (click)="mostrar('tres-leches')">Tres
+            leches</button>
+        <button class="btn btn-custom" [class.active]="especialVisible" (click)="mostrar('especial')">Especial</button>
+        <button class="btn btn-custom" [class.active]="circularAltoVisible" (click)="mostrar('circular-alto')">Pastel
+            circular alto</button>
+        <button class="btn btn-custom" [class.active]="cuadradoVisible" (click)="mostrar('cuadrado')">Pastel
+            cuadrado</button>
+    </div>
+
+    <!-- Vainilla -->
+    @if (vainillaVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.vainilla" alt="Vainilla Cake">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Rebanadas</th>
+                        <th>Vainilla<br><small>Normal</small></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.vainilla; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.rebanadas }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Chocolate -->
+    @if (chocolateVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.chocolate" alt="Chocolate Cake">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Rebanadas</th>
+                        <th>Chocolate<br><small>Normal</small></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.chocolate; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.rebanadas }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Combinado -->
+    @if (combinadoVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.combinado" alt="Combinado Cake">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Rebanadas</th>
+                        <th>Combinado<br><small>Normal</small></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.combinado; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.rebanadas }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Tres Leches -->
+    @if (tresLechesVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.tresLeches" alt="Tres Leches Cake">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Rebanadas</th>
+                        <th>Tres leches<br><small>Normal</small></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.tresLeches; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.rebanadas }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+    <!-- Especial -->
+    @if (especialVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.especial" alt="Especial Cake">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Rebanadas</th>
+                        <th>Especial<br><small>Normal</small></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.especial; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.rebanadas }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Circular Alto (tres panes) -->
+    @if (circularAltoVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.circularAlto" alt="Pastel Circular Alto">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Rebanadas</th>
+                        <th>Vainilla<br><small>Alto (Tres panes)</small></th>
+                        <th>Chocolate<br><small>Alto (Tres panes)</small></th>
+                        <th>Combinado<br><small>Alto (Tres panes)</small></th>
+                        <th>Especial<br><small>Alto (Tres panes)</small></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.circularAlto; track $index) {
+                    <tr>
+                        <td>{{ f.tamano }}</td>
+                        <td>{{ f.rebanadas }}</td>
+                        <td>{{ f.vainilla | currency:'MXN':'symbol':'1.0-0' }}</td>
+                        <td>{{ f.chocolate | currency:'MXN':'symbol':'1.0-0' }}</td>
+                        <td>{{ f.combinado | currency:'MXN':'symbol':'1.0-0' }}</td>
+                        <td>{{ f.especial | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Cuadrado -->
+    @if (cuadradoVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.cuadrado" alt="Pastel Cuadrado">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Rebanadas</th>
+                        <th>Vainilla</th>
+                        <th>Chocolate</th>
+                        <th>Combinado</th>
+                        <th>Tres Leches</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.cuadrado; track $index) {
+                    <tr>
+                        <td>{{ f.tamano }}</td>
+                        <td>{{ f.rebanadas }}</td>
+                        <td>{{ f.vainilla | currency:'MXN':'symbol':'1.0-0' }}</td>
+                        <td>{{ f.chocolate | currency:'MXN':'symbol':'1.0-0' }}</td>
+                        <td>{{ f.combinado | currency:'MXN':'symbol':'1.0-0' }}</td>
+                        <td>{{ f.tresLeches | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    } 

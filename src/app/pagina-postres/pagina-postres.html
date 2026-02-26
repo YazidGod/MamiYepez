@@ -1,0 +1,180 @@
+<div id="Postres" class="container py-3">
+
+    <div class="text-center mb-3">
+        <h1 class="mb-0">Postres</h1>
+    </div>
+
+    <!-- Botonera -->
+    <div class="d-flex flex-wrap align-items-center justify-content-center text-center gap-2 mb-3">
+        <button class="btn btn-custom" [class.active]="chocoflanVisible" (click)="mostrar('chocoflan')">Choco flan</button>
+        <button class="btn btn-custom" [class.active]="payquesoVisible"
+            (click)="mostrar('payqueso')">Pay de queso</button>
+        <button class="btn btn-custom" [class.active]="tartasVisible"
+            (click)="mostrar('tartas')">Tartas</button>
+        <button class="btn btn-custom" [class.active]="cheesecakeVisible" (click)="mostrar('cheesecake')">Cheese cake</button>
+        <button class="btn btn-custom" [class.active]="paysVisible" (click)="mostrar('pays')">Pays</button>
+        <button class="btn btn-custom" [class.active]="cupcakeVisible" (click)="mostrar('cupcake')">Cup cake</button>
+    </div>
+
+    <!-- Choco flan -->
+    @if (chocoflanVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.chocoflan" alt="Choco Flan">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Choco flan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.chocoflan; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Pay de queso -->
+    @if (payquesoVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.payqueso" alt="Pay de Queso">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Pay de queso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.payqueso; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Tartas -->
+    @if (tartasVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.tartas" alt="Tartas">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Porción</th>
+                        <th>Tartas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.tartas; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Cheese cake -->
+    @if (cheesecakeVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.cheesecake" alt="Cheese Cake">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Cheese cake</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.cheesecake; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Pays -->
+    @if (paysVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.pays" alt="Pays">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Pays</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.pays; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tipo }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Cup cake -->
+    @if (cupcakeVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.cupcake" alt="Cup Cakes">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Sabor</th>
+                        <th>Cupcake</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.cupcake; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.sabor }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+</div>

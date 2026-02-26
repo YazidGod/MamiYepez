@@ -1,0 +1,102 @@
+.btn-custom {
+    background-color: #c49bd8;
+    color: #000;
+    border-radius: 0.5rem;
+    border: 1px solid #a17fcf;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.btn-custom:hover {
+    background-color: #b584d0;
+    color: #fff;
+}
+
+.btn-custom.active {
+    background-color: #9b6bc4;
+    color: #fff;
+    border-color: #7a4fa3;
+}
+
+h1 {
+    color: #f96094;
+}
+
+:root {
+  --lila: #c59ad6;
+}
+
+table{
+  border: 1.5px solid var(--lila);
+  border-radius: .5rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+
+  thead th {
+    font-weight: 600;
+    text-align: center;
+  }
+
+  th, td {
+    border-right: 1.5px solid var(--lila);
+    border-bottom: 1.5px solid var(--lila);
+    text-align: center;
+    vertical-align: middle;
+    padding: .9rem;
+  }
+
+  tr th:last-child,
+  tr td:last-child {
+    border-right: 0;
+  }
+
+  tr:last-child th,
+  tr:last-child td {
+    border-bottom: 0;
+  }
+}
+
+.table-lila {
+  border: 2px solid var(--lila);
+  border-radius: 0.5rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  width: 100%;
+}
+
+.table-lila thead th {
+  font-weight: 600;
+  text-align: center;
+  background-color: #f8f0fc;
+}
+
+.table-lila th,
+.table-lila td {
+  border-right: 1.5px solid var(--lila);
+  border-bottom: 1.5px solid var(--lila);
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.75rem;
+}
+
+.table-lila tr th:last-child,
+.table-lila tr td:last-child {
+  border-right: 0;
+}
+
+.table-lila tr:last-child th,
+.table-lila tr:last-child td {
+  border-bottom: 0;
+}
+
+.img-frame {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 3px solid var(--lila);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

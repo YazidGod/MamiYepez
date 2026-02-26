@@ -1,0 +1,152 @@
+<div id="Gelatinas" class="container py-3">
+
+    <div class="text-center mb-3">
+        <h1 class="mb-0">Gelatinas</h1>
+    </div>
+
+    <!-- Botonera -->
+    <div class="d-flex flex-wrap align-items-center justify-content-center text-center gap-2 mb-3">
+        <button class="btn btn-custom" [class.active]="aguaVisible" (click)="mostrar('agua')">Agua</button>
+        <button class="btn btn-custom" [class.active]="lecheVisible"
+            (click)="mostrar('leche')">Leche</button>
+        <button class="btn btn-custom" [class.active]="frutosVisible"
+            (click)="mostrar('frutos')">Frutos</button>
+        <button class="btn btn-custom" [class.active]="floresVisible" (click)="mostrar('flores')">Flores/Artísticas</button>
+        <button class="btn btn-custom" [class.active]="combinadaVisible" (click)="mostrar('combinada')">Combinada</button>
+    </div>
+
+    <!-- Agua -->
+    @if (aguaVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.agua" alt="Gelatina de Agua">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Gelatina de agua</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.agua; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Leche -->
+    @if (lecheVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.leche" alt="Gelatina de Leche">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Gelatina de leche</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.leche; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Frutos -->
+    @if (frutosVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.frutos" alt="Gelatina de Frutos">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Gelatina de frutos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.frutos; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Flores -->
+    @if (floresVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.flores" alt="Gelatina de Flores">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Gelatina de flores/artísticas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.flores; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+
+    <!-- Combinada -->
+    @if (combinadaVisible) {
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+            <img class="img-frame" [src]="img.combinada" alt="Gelatina Combinada">
+        </div>
+        <div class="col-12 col-md-7">
+            <table class="table-lila w-100">
+                <thead>
+                    <tr>
+                        <th>Tamaño</th>
+                        <th>Combinada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (f of tablas.combinada; track $index) {
+                    <tr>
+                        <td class="text-capitalize">{{ f.tamano }}</td>
+                        <td>{{ f.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    }
+</div>
