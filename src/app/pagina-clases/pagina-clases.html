@@ -1,31 +1,24 @@
 <div class="container">
-    <p class="mb-0 text-center text-center" id="Titulo">Clases Actuales</p>
-    <div class="mt-2 d-flex flex-md-row align-items-center gap-3">
-        <img src="img/reposteria-avanzada.webp" class="img-fluid flex-shrink-0" style="width: 40%; height: auto;"
-            alt="Logo de Janett Repostería">
-        <div class="text-center text-md-start ml-3">
-            <p class="mt-1 text-center" id="txt-rosa"><strong>virtuales de reposteria</strong></p>
-            <p class="mt-1 text-center" id="txt-rosa">
-                Cada curso incluye 10 clases en VIVO en la plataforma (aplicación) ZOOM<br>
-            </p>
-            <p class="mt-1 text-center" id="txt-negro">
-                UN DIA a la semana de 4:00 a 7:00 pm <br>
-                Al final del curso se entrega reconocimiento con validez oficial (avalados por la SEP).
-            </p>
-            <p class="mt-1 text-center" id="txt-rosa">
-                <strong>Los cursos inician la primer semana de febrero 2026</strong>
-            </p>
-            <ul class="text-center" id="txt-rosa">
-                <li>Pasteleria y decoración (Lunes)</li>
-                <li>Panes, panques y galletas (Miercoles)</li>
-                <li>Tartas y tartales (Jueves)</li>
-            </ul>
-            <p class="mt-1 text-center" id="txt-negro1">
-                Recuerde que el curso debera de ser pagado antes del 10 de enero <br>
-                mas información en: <a href="https://www.ideft.edu.mx/" class="">IDEFT</a>
-            </p>
+  <h1 id="Titulo" class="mb-0 text-center">Clases Actuales</h1>
+  <br><br>
+
+  <div class="row g-3 mt-2">
+    @for (clase of clases; track $index) {
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex flex-row align-items-center text-center gap-2">
+              <img class="img-frame img-fluid mb-3" [src]="clase.img" alt="{{ clase.nombre }}">
+              <div>
+                <h5 class="card-title">{{ clase.nombre }}</h5>
+                <p class="card-text">{{ clase.descripcion }}</p>
+                <p class="card-text"><small class="text-muted">{{ clase.dia }}</small></p>
+                <p class="card-text"><small class="text-muted">{{ clase.hora }} p.m.</small></p>
+              </div>
+            </div>
+          </div>
         </div>
-
-    </div>
-
+      </div>
+    }
+  </div>
 </div>

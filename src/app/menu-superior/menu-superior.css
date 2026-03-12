@@ -1,67 +1,154 @@
 #menu-superior {
   background-color: #81c8c3;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   position: relative;
+  z-index: 1000;
 }
 
-#menu-superior .bi-list {
-  color: rgb(0, 0, 0);
-  font-size: 2rem;
+#menu-superior .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-brand .hamburger-btn {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1.5rem;
   cursor: pointer;
+  padding: 0.3rem;
+  display: none;
 }
 
-.menu-desplegable {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #6bb3ae;
-  padding: 1rem 0;
+.nav-brand a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.menu-desplegable ul {
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  gap: 2rem;
 }
 
-.menu-desplegable li {
-  padding: 0.5rem 2rem;
+.nav-links li {
+  display: inline-block;
 }
 
-.menu-desplegable a {
-  color: rgb(0, 0, 0);
+.nav-links a {
+  color: #000;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.nav-profile .profile-btn {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
   display: block;
 }
 
-.menu-desplegable a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+.nav-profile .profile-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
 }
 
-.perfil-desplegable {
+.perfil-dropdown {
   position: absolute;
   top: 100%;
   right: 0;
-  width: 200px;
+  width: 180px;
   background-color: #6bb3ae;
-  padding: 1rem;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-.perfil-desplegable ul {
+
+.perfil-dropdown ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.perfil-desplegable li {
-  padding: 0.5rem 0;
+
+.perfil-dropdown li {
+  padding: 0.5rem 1rem;
 }
-.perfil-desplegable a {
-  color: rgb(0, 0, 0);
+
+.perfil-dropdown a {
+  color: #000;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: block;
 }
-.perfil-desplegable a:hover {
+
+.perfil-dropdown a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
+
+/* Estilos para móvil - Menú de hamburguesa */
+@media (max-width: 768px) {
+  .nav-brand .hamburger-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #6bb3ae;
+    padding: 1rem 0;
+    flex-direction: column;
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-links li {
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+}
+

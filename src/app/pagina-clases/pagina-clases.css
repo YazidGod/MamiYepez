@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-#Titulo{
-    font-size:40px;
+h1, #Titulo {
+    font-size: 50px;
     font-weight: bold;
     color: #CC99CC;
     font-family: 'Calistoga';
 }
-#txt-rosa{
-    color: #CC99CC;
-    font-family: 'Calistoga';
+
+:root {
+  --lila: #c59ad6;
 }
-#txt-negro{
-    color: black;
-    font-family: 'Calistoga';
+
+.img-frame {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

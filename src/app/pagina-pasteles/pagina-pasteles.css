@@ -19,7 +19,10 @@
     border-color: #7a4fa3;
 }
 h1 {
-    color: #f96094;
+    color: #CC99CC;
+    font-family: 'Calistoga';
+    font-size: 50px;
+    font-weight: bold;
 }
 
 :root {
